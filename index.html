@@ -49,8 +49,7 @@
                                             <ul id="navigation">
                                                 <li><a href="index.html">home</a></li>
                                                 <li><a href="https://github.com/DZavalza2/sepsis_early_detection">Github</a></li>
-                                                <li><a href="https://github.com/DZavalza2/sepsis_early_detection">Report</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="https://github.com/DZavalza2/sepsis_early_detection/blob/main/report.pdf">Report</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -270,6 +269,22 @@
                     
             </div>
         </div>
+        <div class="depertment_area" style="background-image: url('img/cool-background.avif'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+            <div class="container">
+                <div class="section_title">
+                    <h3>Discussion</h3>
+                    <h1>Data Balancing</h1>
+                    <p>To ensure the fairness and reliability of our predictive model, a critical step undertaken was the balancing of the dataset. Given the inherent imbalance in medical datasets—where instances of sepsis are considerably rarer compared to non-sepsis cases—unadjusted, this skew could lead to a model biased towards predicting the majority class, thus undermining its clinical utility. For every training epoch, we ensured an equal distribution of sepsis and non-sepsis labels presented to the model, thereby maintaining balance in the learning process. Upon the completion of each epoch, we shuffled the predominant non-sepsis data with fresh instances. This approach guaranteed that our model was exposed to a varied set of data points, while still preserving balanced label representation throughout the training phase.
+                    </p>
+                    <br></br>
+                    <h1>Limitations</h1>
+                    <br></br>
+                    <p>When choosing our features, we decided to go with the four vital signs listed on the UCSD inpatient protocol, or SBAR (Situation, Background, Assessment, Recommendation), and blood pressure, heart rate, respiration rate, and body temperature are criteria for suspected infection. Even though these vital signs are crucial to determining sepsis, other measure- ments could be utilized to better train the model, including blood pressure (Mean Arterial Pressure), platelets, and lactate levels. We could add these measurements to our data for future improvements on the model.
+                        Another concern is that MIMIC-III dataset is from Beth Israel Deaconess Medical Center between 2001 and 2012, and the protocol we used to extract features from the dataset in from present day UC San Diego Medical Center - Hillcrest Campus. This is a potential issue when it comes to assign labels (with sepsis and without sepsis). In the future, it would be beneficial to switch to UCSD in-house electronic medical records for a match between data and protocol.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -295,66 +310,7 @@
     </div>
     <!-- Emergency_contact end -->
 
-    <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4 ">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="img/logo.png" alt="">
-                                </a>
-                            </div>
-                            
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-dribbble"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                        
-                    </div>
-                    <div class="col-xl-4  col-md-6 col-lg-4">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="row">
-                    <div class="bordered_1px "></div>
-                    <div class="col-xl-12">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
 
     <!-- JS here -->
